@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile Page</title>
+</head>
+<body>
+    <h1>{{ user.screen_name }}</h1>
+    <form action="{{  url_for('search') }}">
+        <label for="q">Tweeter Search</label>
+        <input type="text" name="q" id="q" value="computers+filter:images">
+        <button type="submit">Search</button>
+    </form>
+
+    <br/>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
